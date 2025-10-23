@@ -1,0 +1,605 @@
+:root {
+    --color-lila: #e8ddf4;
+    --color-blanco: #ffffff;
+    --color-negro: #000;
+    --color-dorado: #C8B281;
+    --color-hover-dorado: #b49f6f;
+    --color-lila-2: #e1d7f5;
+    /* Se cambió el nombre y el valor para una paleta más coherente. Ahora el dorado es el color de acento. */
+    --color-acento: var(--color-dorado);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-negro);
+    background-color: var(--color-blanco);
+    padding-top: 70px;
+}
+
+.header {
+    /* Fondo sólido para un diseño más limpio */
+    background: var(--color-lila);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--color-lila-2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+
+.logo h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Mantenemos la fuente minimalista */
+    font-size: 2rem;
+    /* Ligeramente más grande */
+    font-weight: 300;
+    color: var(--color-negro);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    padding-bottom: 5px;
+    /* Espacio entre el texto y el borde */
+    border-bottom: 2px solid var(--color-dorado);
+    /* Borde simple y elegante */
+    display: inline-block;
+    /* Necesario para que el borde se ajuste al ancho del texto */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-negro);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-acento);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--color-negro);
+}
+
+.principal {
+    background: url('../imagen/fondo-spa3.jpg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* Superposición para mejorar la legibilidad del texto */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+}
+
+.principal-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    padding: 0 20px;
+    color: var(--color-blanco);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.principal-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.principal-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background: linear-gradient(to bottom, var(--color-lila), var(--color-lila-2));
+    /* Borde más suave para un diseño más elegante */
+    border-top: 1px solid #d4c8e0;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--color-negro);
+}
+
+.footer-info p {
+    color: var(--color-negro);
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: var(--color-negro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-acento);
+}
+
+.footer-bottom {
+    /* Borde más suave para el pie de página */
+    border-top: 1px solid #d4c8e0;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--color-negro);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.btn-reserva {
+    /* Se usa el color de acento para el botón y el hover */
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    padding: 20px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reserva:hover {
+    background-color: var(--color-hover-dorado);
+}
+
+/*----------------------- ESTILOS DE LA SECCIÓN DEL BLOG ---------------------- */
+
+/* Estilos generales del artículo */
+.posteo-masaje {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Título principal del artículo */
+.posteo-masaje h1 {
+    font-size: 2.5em;
+    color: #5A769B;
+    /* Color de acento para el título */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Subtítulos dentro del artículo */
+.posteo-masaje h2 {
+    font-size: 1.8em;
+    color: #2c2c2c;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+/* Estilos de los párrafos */
+.posteo-masaje p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el blockquote (cita destacada) */
+.posteo-masaje blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #7f8c8d;
+    border-left: 4px solid #5A769B;
+    /* Barra vertical con el color de acento */
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+/* Estilos de la imagen y su contenedor (figure) */
+.posteo-masaje figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.posteo-masaje figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.posteo-masaje figure figcaption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* Estilos de las listas (beneficios y advertencias) */
+.posteo-masaje ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.posteo-masaje ul li {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+
+
+/* Estilos del párrafo de la fuente externa */
+.fuente-externa {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.fuente-externa a {
+    color: #5A769B;
+    /* Color de acento para el enlace */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fuente-externa a:hover {
+    text-decoration: underline;
+}
+
+/* Opcional: Si quieres mantener los estilos de la sección "blog" */
+.blog {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+.blog p {
+    color: #2c2c2c;
+}
+
+---
+/*----------------------- ESTILOS DE LA GALERÍA ---------------------- */
+
+/* Estilos de la sección principal de la galería */
+.galeria-fotos {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.galeria-contenedor {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.galeria-contenedor h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.galeria-contenedor h2::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #5A769B;
+    margin: 10px auto 0;
+}
+
+/* Contenedor de las imágenes: sistema de cuadrícula con flexbox */
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilo individual de cada imagen (figure) */
+.imagenes figure {
+    width: 100%;
+    max-width: 350px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el cursor sobre la figura */
+.imagenes figure:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de la imagen dentro de la figura */
+.imagenes img {
+    width: 100%;
+    height: 250px;
+    /* Tamaño fijo para todas las imágenes */
+    object-fit: cover;
+    /* Recorta la imagen para que se ajuste sin deformarse */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.imagenes img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para la descripción de la imagen */
+.imagenes figcaption {
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .galeria-contenedor h2 {
+        font-size: 2em;
+    }
+
+    .imagenes {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagenes figure {
+        max-width: 100%;
+    }
+}
+
+---
+/*----------------------- SECCIÓN FORMULARIO ---------------------- */
+
+.contact {
+    padding: 80px 0;
+    /* Fondo de la sección, un gris azulado suave */
+    background: #e9f0f7;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact .section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.contact .section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #5A769B;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Estilos para cada caja individual: la de información y el formulario */
+.contact-info,
+.contact-form {
+    flex: 1 1 450px;
+    /* Fondo de las cajas, un blanco puro para un alto contraste */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* Sombra para que floten sobre el fondo de la sección */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición para efectos hover */
+}
+
+/* Efecto al pasar el cursor para que resalten aún más */
+.contact-info:hover,
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.contact-info h3 {
+    font-size: 2em;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+.contact-item strong {
+    color: #2c2c2c;
+    margin-right: 10px;
+}
+
+.contact-form {
+    order: 2;
+}
+
+.contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c2c2c;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #5A769B;
+    box-shadow: 0 0 8px rgba(90, 118, 155, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5A769B;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #4A6588;
+    transform: translateY(-2px);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Viva SPA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Aura Viva SPA</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="post.html">Ver Post</a></li>
+                    <li><a href="galeria.html">Ver Galeria</a></li>
+                    <li><a href="formulario.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>En Aura Viva Spa, estamos para ti</h3>
+                        <p>Si tienes comentarios, dudas, reclamos u otros, no dudes en contactarnos. Responderemos en
+                            menos de 24 horas.</p>
+
+                        <div class="contact-item">
+                            <strong>Email:</strong> contacto@auraviva.cl
+                        </div>
+                        <div class="contact-item">
+                            <strong>Teléfono:</strong> +1 234 567 8900
+                        </div>
+                        <div class="contact-item">
+                            <strong>Ubicación:</strong> San Bernardo, Chile
+                        </div>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Celular</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoAsunto">Tipo de Asunto</label>
+                            <select id="tipoAsunto" name="tipoAsunto" required>
+                                <option value="">-- Selecciona una opción --</option>
+                                <option value="dudas">Dudas</option>
+                                <option value="sugerencias">Sugerencias</option>
+                                <option value="reclamos">Reclamos</option>
+                                <option value="felicitaciones">Felicitaciones</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="conociste">¿Por dónde nos conociste?</label>
+                            <input type="text" id="conociste" name="conociste" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h3>Aura Viva Spa</h3>
+                        <p>Expertos en Relajación.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="post.html">Ver Post</a>
+                        <a href="galeria.html">Ver Galeria</a>
+                        <a href="formulario.html">Contacto</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Aura Viva Spa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- JavaScript del sitio web -->
+        <script src="../js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

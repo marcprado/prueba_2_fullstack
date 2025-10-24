@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Carrito de Compras</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Standard header to use in all HTML files -->
+    <header class="header">
+        <nav class="navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><span class="tech-text">Tech</span><span class="store-text">Store</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="galeria.html">Catálogo</a></li>
+                    <li><a href="formulario.html">Contacto</a></li>
+                    <li><a href="carrito.html" class="active">Carrito</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrito-section">
+            <div class="container">
+                <h2 class="section-title">Carrito de Compras</h2>
+                <div class="carrito-container">
+                    <div class="carrito-items">
+                        <!-- Los items del carrito se cargarán dinámicamente aquí -->
+                    </div>
+                    <div class="carrito-resumen">
+                        <h3>Resumen del Pedido</h3>
+                        <div class="resumen-item">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="resumen-item">
+                            <span>IVA (19%):</span>
+                            <span id="iva">$0.00</span>
+                        </div>
+                        <div class="resumen-item total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        <button class="btn-primary" id="btn-checkout">Proceder al Pago</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Tu tienda de tecnología de confianza</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: contacto@techstore.cl</p>
+                    <p>Teléfono: +56 9 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/carrito.js"></script>
+    <script src="../js/script</script>
+</body>
+</html>
